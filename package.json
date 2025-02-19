@@ -1,0 +1,53 @@
+{
+  "name": "@repo/ui",
+  "version": "1.0.0",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "private": true,
+  "scripts": {
+    "build:css": "pnpm exec postcss src/global.css -o dist/index.css",
+    "build": "tsup src/components/**/* --out-dir dist/components --dts --format esm,cjs  && pnpm run build:css ",
+    "gen:component": "node scripts/generate-components.js",
+    "lint": "eslint . --max-warnings 0",
+    "generate:component": "turbo gen react-component",
+    "check-types": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@turbo/gen": "^2.4.0",
+    "@types/node": "^22.13.0",
+    "@types/react": "19.0.8",
+    "@types/react-dom": "19.0.3",
+    "eslint": "^9.20.0",
+    "postcss-cli": "^11.0.0",
+    "tsup": "^8.3.6",
+    "typescript": "5.7.3"
+  },
+  "dependencies": {
+    "@repo/ui": "workspace:^",
+    "@tailwindcss/postcss": "^4.0.6",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "postcss": "^8.5.2",
+    "radix-ui": "^1.1.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^3.0.1",
+    "tailwindcss": "^4.0.6",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "exports": {
+    "./button": {
+      "import": "./dist/components/button/index.mjs",
+      "require": "./dist/components/button/index.cjs",
+      "types": "./dist/components/button/index.d.ts"
+    },
+    "./input": {
+      "import": "./dist/components/input/index.mjs",
+      "require": "./dist/components/input/index.cjs",
+      "types": "./dist/components/input/index.d.ts"
+    }
+  }
+}
