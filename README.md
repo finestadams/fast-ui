@@ -4,6 +4,13 @@ Fast UI is a modular and customizable UI component library designed for modern R
 
 ## 🚀 Getting Started
 
+### Prerequisites
+
+Before installing Fast UI, ensure you have a React or Next.js project set up with Tailwind CSS. You can follow the official Tailwind CSS installation guide for React or Next.js:
+
+- [Tailwind CSS with Create React App](https://tailwindcss.com/docs/guides/create-react-app)
+- [Tailwind CSS with Next.js](https://tailwindcss.com/docs/guides/nextjs)
+
 ### Installation
 
 You can install the Fast UI CLI using `npm`, `yarn`, or `pnpm`:
