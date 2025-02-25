@@ -49,19 +49,19 @@ This will download and install the `button` component inside your project's `com
 Before using Fast UI components, ensure you have the following dependencies installed:
 
 ```sh
-npm install react clsx class-variance-authority tailwind-merge
+npm install clsx class-variance-authority tailwind-merge
 ```
 
 or
 
 ```sh
-yarn add react clsx class-variance-authority tailwind-merge
+yarn add clsx class-variance-authority tailwind-merge
 ```
 
 or
 
 ```sh
-pnpm add react clsx class-variance-authority tailwind-merge
+pnpm add clsx class-variance-authority tailwind-merge
 ```
 
 ### Utility Functions
