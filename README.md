@@ -103,9 +103,7 @@ For Tailwind CSS v4 or later, you can define your color palette in your CSS file
 Ensure your global `styles.css` includes:
 
 ```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 @theme {
   --color-primary: #3b82f6;
