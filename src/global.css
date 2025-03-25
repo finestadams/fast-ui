@@ -1,6 +1,31 @@
 @import "tailwindcss";
 
+
 @theme {
-    --color-mint-500: oklch(0.72 0.11 178);
-    --color-black: #0000;
+  --color-primary: theme("colors.blue.500");
+  --color-alternative: theme("colors.slate.500");
+  --color-foreground-primary: theme("colors.white"); 
+  --color-foreground-alternative: theme("colors.white"); 
+ 
+  --color-ghost: theme("colors.gray.100");
+  --color-outline: theme("colors.gray.300");
+
+  --color-link: theme("colors.blue.600");
+  --color-danger: theme("colors.red.500");
+  --color-foreground-danger: theme("colors.white"); 
+
+  --color-primary-hover: color-mix(in oklch, var(--color-primary) 85%, white);
+  --color-primary-active: color-mix(in oklch, var(--color-primary) 70%, black);
+  --color-alternative-hover: color-mix(in oklch, var(--color-alternative) 85%, white);
+  --color-alternative-active: color-mix(in oklch, var(--color-alternative) 70%, black);
+  --color-danger-hover: color-mix(in oklch, var(--color-danger) 85%, white);
+  --color-danger-active: color-mix(in oklch, var(--color-danger) 70%, black);
+  --color-link-hover: color-mix(in oklch, var(--color-link) 85%, white);
+  --color-link-active: color-mix(in oklch, var(--color-link) 70%, black);
+
+  --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-hover), var(--color-primary-active));
+  --gradient-duotone: linear-gradient(to bottom right, var(--color-primary), var(--color-link));
+  --gradient-outline: linear-gradient(to bottom right, var(--color-primary), var(--color-link));
+  --gradient-shadow: linear-gradient(to right, var(--color-primary), var(--color-primary-hover), var(--color-primary-active));
 }
+
